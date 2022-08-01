@@ -1,0 +1,24 @@
+first: git init
+#to initialize a git folder
+
+next: git add *name_of_changed_file
+#to stage changes
+
+next: git commit -m *" message "
+#to add changes to the local repository
+
+#to create and move to a new bannch 
+so: git checkout -b *new_branch_name
+#to create a new branch
+
+#to move to another branch without creating a new branch
+so: git checkout *new_branch_name
+
+#to get new changes from a different branch
+#This get changes from a branch and adds them to the current branch
+so: git merge *master
+
+
+#to setup a remote repository with github after creating one do
+so: git remote add origin https://github.com/Nana-blackk/My_Security.git
+#this enables the git pull and push
