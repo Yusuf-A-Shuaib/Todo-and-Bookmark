@@ -19,3 +19,17 @@ Hello {name},
 If you did not make this request then simply ignore this mail.
     """
     mail.send(msg)
+
+
+def login_on_account(email):
+    msg = Message('Login on account.', sender='Yusuf S.A.', recipients=[email])
+
+    msg.body = f"""
+A login occured on your account:{email}, Today.
+
+If you did login kindly ignore this message.
+
+
+If you did not make this request report here >>>{url_for('views.report', email=email)}.
+            """
+    mail.send(msg)

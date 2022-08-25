@@ -7,9 +7,8 @@ from flask import Flask
 from flask import Flask, render_template
 from flask_login import LoginManager
 from flask_mail import Mail
-from os import path
 from todo.auth import auth
-from todo.routes import routes
+from todo.views import views
 from todo.extensions import db
 
 
@@ -36,7 +35,7 @@ def create_app(test_config=None):
     db.init_app(app)
 
     app.register_blueprint(auth)
-    app.register_blueprint(routes)
+    app.register_blueprint(views)
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.signup'
